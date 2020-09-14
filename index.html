@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Affiliate Me!</title>
+    <meta name="description" content="Affiliate Me!">
+    <meta name="author" content="SitePoint">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <h1>Affiliate Me!</h1>
+            <div class="alert alert-info">
+                <p class="mb-0">Paste a url for a product below and we'll reformat it for you so you can give your hard earned $$$ to your favorite affiliate!</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" v-model="rawUrl" v-on:keyup.13="rawUrlChange">
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-block btn-primary mt-1 mt-sm-0" v-on:click="rawUrlChange">Submit</button>
+                </div>
+            </div>
+            
+            <br>
+            <div v-if="validUrl == false">
+                <p>This is not a valid URL</p>
+            </div>
+            <table class="table table-striped" v-if="lastUrl && lastUrl == rawUrl">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Affiliate</th>
+                        <th>Link</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="a in affiliates">
+                        <td class="font-weight-bold"><a v-bind:href="a.website" target="_blank">{{a.name}}</a></td>
+                        <td><a v-bind:href="a.preppedUrl" target="_blank">{{a.preppedUrl}}</a></td>
+                        <td><button class="btn btn-sm btn-primary" v-on:click="copyText(a.preppedUrl)">Copy!</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
