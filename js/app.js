@@ -41,9 +41,9 @@ let app = new Vue({
                 preppedUrl: null
             },
             {
-                slug: 'warewolf-the-podcast',
+                slug: 'werewolf-the-podcast',
                 website: 'https://keepontheheathlands.podbean.com/',
-                name: 'Warewolf: The Podcast',
+                name: 'Werewolf: The Podcast',
                 affiliateId: '235787',
                 preppedUrl: null
             },
