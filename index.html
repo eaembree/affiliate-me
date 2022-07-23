@@ -38,7 +38,7 @@
                     <tr>
                         <th>Affiliate</th>
                         <th>Link</th>
-                        <th></th>
+                        <th colspan="2"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,6 +46,7 @@
                         <td class="font-weight-bold"><a v-bind:href="a.website" target="_blank">{{a.name}}</a></td>
                         <td><a v-bind:href="a.preppedUrl" target="_blank">{{a.preppedUrl}}</a></td>
                         <td><button class="btn btn-sm btn-primary" v-on:click="copyText(a.preppedUrl)">Copy!</button></td>
+                        <td><a class="btn btn-sm btn-primary" :href="a.preppedUrl" target="_blank">Open</a></td>
                     </tr>
                 </tbody>
             </table>

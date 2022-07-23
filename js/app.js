@@ -47,6 +47,27 @@ let app = new Vue({
                 affiliateId: '235787',
                 preppedUrl: null
             },
+            {
+                slug: 'the-glitterbois',
+                website: 'https://breakfastpuppies.com/podcasts/glitterbois',
+                name: 'The Glitterbois',
+                affiliateId: '158958',
+                preppedUrl: null
+            },
+            {
+                slug: 'bonus-experience',
+                website: 'https://bxpcast.com/',
+                name: 'Bonux Experience',
+                affiliateId: '22805',
+                preppedUrl: null
+            },
+            {
+                slug: 'pain-in-the-dice',
+                website: 'https://www.paininthedice.com/',
+                name: 'Pain in the Dice',
+                affiliateId: '2672313',
+                preppedUrl: null
+            }
         ]
     },
     methods: {
